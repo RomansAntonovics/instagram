@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?2lht0e");
+  src: url("fonts/icomoon.eot?2lht0e#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?2lht0e") format("truetype"),
+    url("fonts/icomoon.woff?2lht0e") format("woff"),
+    url("fonts/icomoon.svg?2lht0e#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  /*speak: never;*/
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-notification:before {
+  content: "\e906";
+}
+.icon-hot:before {
+  content: "\e901";
+}
+.icon-create:before {
+  content: "\e902";                                    
+  position: relative;
+  top: 0.1875em;
+  font-size: 1.1em;
+}
+.icon-explore:before {
+  content: "\e903";
+}
+.icon-fire:before {
+  content: "\e904";
+}
+.icon-home:before {
+  content: "\e905";
+}
+.icon-hamburger:before {
+  content: "\e903";
+}
+
+.icon-video_upload:before {
+  content: "\e904"};
+
+  .icon-camera:before {
+    content: "\e90f"
+  }

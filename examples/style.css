@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  background: rgb(188, 255, 190);
+}
+
+h2 {
+  color: rgb(63, 63, 63);
+}
+
+.gallery {
+  max-width: 800px;
+  margin: auto;
+}
+.gallery__tabs {
+  display: flex;
+  justify-content: center;
+  background: rgb(229, 229, 229);
+  gap: 30px;
+  padding: 5px 0;
+}
+.gallery__btn {
+  text-decoration: none;
+  font-family: ubuntu;
+  color: rgb(63, 63, 63);
+  background: rgba(63, 63, 63, 0.2);
+  border-radius: 5px;
+  padding: 4px;
+}
+.gallery__btn--active {
+  background: rgb(33, 255, 229);
+}
+.gallery__images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  width: 100%;
+}
+.gallery__images img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

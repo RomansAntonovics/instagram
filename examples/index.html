@@ -1,0 +1,51 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="style.css" />
+<!--
+    B - block
+    E - element (__)
+    M - modifier (--)
+-->
+
+<h2>Gallery</h2>
+<div class="gallery">
+  <div class="gallery__tabs" onclick="tabpress(event, this);">
+    <a href="#" class="gallery__btn">latest</a>
+    <a href="#" class="gallery__btn">archive</a>
+  </div>
+  <div class="gallery__images">
+    <img
+      src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=540&q=80"
+      alt=""
+    />
+
+    <img
+      src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=540&q=80"
+      alt=""
+    />
+    <img
+      src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=540&q=80"
+      alt=""
+    />
+    <img
+      src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=540&q=80"
+      alt=""
+    />
+  </div>
+</div>
+
+<script>
+  function tabpress(event, tabs) {
+    event.preventDefault();
+    if (event.target.tagName == "A") {
+      let active = tabs.querySelector(".gallery__btn--active");
+      if (active) {
+        active.classList.remove("gallery__btn--active");
+      }
+
+      event.target.classList.add("gallery__btn--active");
+    }
+  }
+</script>

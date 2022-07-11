@@ -1,0 +1,80 @@
+oga {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: rgb(136, 209, 40);
+    border-radius: 50%;
+  }
+  
+  krums {
+    display: inline-block;
+    padding: 20px;
+    background: rgba(172, 255, 47, 0.308);
+    margin: 10px;
+  }
+  
+  zars {
+    display: inline-block;
+    padding: 5px;
+    border-top: 3px solid brown;
+  }
+  
+  zars oga {
+    position: relative;
+    border-top: 3px solid green;
+  }
+  
+  .mellenes oga {
+    background: blueviolet;
+  }
+  
+  .mellenes zars {
+    position: relative;
+    border-top-color: rgb(55, 214, 41);
+  }
+  
+  zars oga::before {
+    position: absolute;
+    content: "|";
+    top: -15px;
+    left: 42%;
+  }
+  
+  .mellenes zars:nth-child(2) oga {
+    background: rgb(88, 22, 150);
+  }
+  
+  .avenes oga {
+    background: rgb(250, 100, 100);
+  }
+  
+  .avenes ~ oga {
+    background: rgb(250, 150, 100);
+  }
+  
+  .avenes + oga {
+    background: gold;
+  }
+  
+  kaste {
+    display: inline-block;
+    background: rgba(206, 141, 44, 0.753);
+    width: 150px;
+    min-height: 100px;
+    border: 5px inset rgb(179, 117, 25);
+  }
+  .avenes zars oga:nth-of-type(3n), 
+  zars.avenes oga:nth-of-type(3n)
+  {
+    background: darkred;
+  }
+  .avenes zars oga:nth-of-type(even),
+  zars.avenes oga:nth-of-type(even) {
+    background: gold;
+  }
+  
+  <zars class="avenes">
+          <oga></oga>
+          <oga></oga>
+          <oga></oga>
+        </zars>

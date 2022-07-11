@@ -1,0 +1,35 @@
+.main-container {
+    padding: 0;
+  }
+  .statis-element {
+    bottom: 0px;
+  }
+  
+  .element1 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+  .yellowElement {
+    position: relative;
+    top: 199px;
+    left: 131px;
+  }
+  .greenElement {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .blueElement {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+  /*
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  */
+  

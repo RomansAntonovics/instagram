@@ -1,0 +1,162 @@
+@import "icons.css";
+
+@function pxToEm($to, $from: 16) {
+  @return $to / $from + 0em;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+}
+.top_header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+
+.top_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: pxToEm(56);
+  padding: 0 pxToEm(21);
+
+  a {
+    text-decoration: none;
+    padding: pxToEm(6);
+    vertical-align: middle;
+  }
+
+  nav a {
+    font-size: pxToEm(18);
+    padding: pxToEm(6, 18);
+  }
+}
+
+.logo svg {
+  height: pxToEm(18);
+}
+
+.top_menu_left {
+  display: flex;
+  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sidebar {
+  background: #fff;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    visibility: visible;
+  }
+  &:hover {
+    -ms-overflow-style: scrollbar;
+    scrollbar-width: scrollbar;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    height: 40px;
+  }
+
+
+  @include closeState;
+  .text {
+    display:none;
+  }
+
+  &.state2 .text {
+    display:initial;
+  }
+
+  &.state2 {
+    @include openState;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  &:hover .sidebar::-webkit-scrollbar {
+    visibility: visible;
+  }
+}
+
+main {
+  width: calc(100% - 240px);
+  .video{
+    display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-content: space-between;
+    width: 210px;
+height: 119px;
+left: 309px;
+top: 754px;
+  }
+  p{
+    color: red;
+  }
+}
+
+
+
+@mixin openState {
+  width: 240px;
+  border:none;
+}
+
+@mixin closeState {
+  width: 55px;
+  border-right:1px solid grey;
+}
+
+@media screen and (max-width: 400px) {
+  .top_menu {
+    font-size:14px;
+  }
+
+  .sidebar {
+    @include openState;
+
+    .text {
+      display:initial;
+    }
+    &.state2 {
+      @include closeState;
+      .text {
+        display:none;
+      }
+    }
+  }
+}
+
+/*
+AUGŠĒJĀ NAVIGĀCIJA
+1. izvietot hamburgeru pareizi
+2. izvietot logo īstajā vietā
+3. nostilizēt input lauku
+4. nostilizēt button lauku
+5. input un button elementu pareiza izveitošana
+(bez atstarpes starp viņiem)
+
+SĀNU NAVIGĀCIJA
+1. ievietot pareizas ikonas un pareizus tekstus blakus
+2. linkam pievienot padingus
+3. pievienot margin starp ikonu un tekstu
+4. nostilizēt linka tekstu
+*/
