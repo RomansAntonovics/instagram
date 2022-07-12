@@ -1,3 +1,9 @@
+@import url('fonts.css');
+
+
+* {
+  font-family: "Helvetica Neue";
+}
 body {
   background: #fafafa;
   margin: 0;
@@ -14,13 +20,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 4px 0 10px;
 }
 
 .logo img {
   padding-top: 8px;
 }
-
+.search_form {
+  margin-left: 6px;
+}
 .search {
   position: relative;
   display: flex;
@@ -43,7 +51,7 @@ header {
   font-size: 14px;
   line-height: 17px;
   box-sizing: border-box;
-  padding: 2px 6px;
+  padding: 2px 6px 2px 20px;
 }
 
 .search__placer {
@@ -54,16 +62,98 @@ header {
 
 .search__input:focus {
   outline: none;
+  background: #f0f0f0;
 }
 
 .search__text {
   color: #8f8f8f;
 }
+
 .search__input:not([value=""]) + .search__placer .search__text,
 .search__input:focus + .search__placer .search__text {
   visibility: hidden;
 }
 
+.search__input:not([value=""]) + .search__placer,
+.search__input:focus + .search__placer {
+  left: 6px;
+}
+
 .search__icon {
   fill: #8f8f8f;
 }
+
+.search__input:focus + .search__placer .search__icon {
+  fill: rgb(31, 31, 31);
+}
+
+.profile {
+  background: #4094ef;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.top_menu nav {
+  display: flex;
+  align-items: center;
+}
+
+.top_menu nav a {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  padding: 6px;
+}
+
+.top_menu nav svg {
+  width: 22px;
+  fill: #262626;
+}
+
+#message {
+  margin-top: 2px;
+}
+
+.top_menu nav a:first-child {
+  margin: 0;
+}
+
+section {
+  min-height: 12rem;
+}
+
+.gallery_tabs {
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: center;
+  height: 49px;
+}
+
+.gallery_tabs a {
+  font-family: Montserrat;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  padding: 0 1px;
+  margin: 0 31px;
+  color: #8f8f8f;
+  fill: #8f8f8f;
+  text-decoration: none;
+  letter-spacing: 0.09em;
+}
+
+.gallery_tabs a svg {
+  margin-right: 7px;
+}
+
+.gallery_tabs .active {
+  border-top: 1px solid #262626;
+  margin-top: -1px;
+  color: #262626;
+  fill: #262626;
+}
+/*
+1. nopozicionēt horizontāli
+2. nopozicionēt vertikāli.
+*/
